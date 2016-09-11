@@ -6,6 +6,7 @@ from dotenv import load_dotenv, find_dotenv
 load_dotenv(find_dotenv())
 
 def results(location, term):
+	#Yelp API credentials
 	auth = Oauth1Authenticator(
     consumer_key=os.environ['CONSUMER_KEY'],
     consumer_secret=os.environ['CONSUMER_SECRET'],
@@ -13,10 +14,12 @@ def results(location, term):
     token_secret=os.environ['TOKEN_SECRET']
 	)
 
+	#Google API key
 	google_key = os.environ['GOOGLE_API_KEY']
 
 	client = Client(auth)
 
+	#Yelp API search parameters
 	params = {
 	    'lang': 'en',
 	    'limit': 7

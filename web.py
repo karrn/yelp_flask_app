@@ -14,7 +14,7 @@ def index():
     results = None
     if address:
         results = myyelp.results(address, term)
-        #address = address.title()
+        address = address.title()
     if term:
     	term = term.title()
     return render_template('index.html', results=results, address=address, term=term)
@@ -25,4 +25,4 @@ def about():
 
 if __name__ == "__main__":
     port =int(os.environ.get("PORT", 5000))
-    app.run(host="0.0.0.0", port=port)
+    app.run(host="0.0.0.0", port=port, debug=True)
