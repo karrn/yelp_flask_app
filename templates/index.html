@@ -17,12 +17,12 @@
 							<p>{{ "Reviews: {}".format(item['reviews'])}}
 							<p>{{ "Tip: {}".format(item['tip'])}}
 							<p>{{ "Phone: {}".format(item['phone'])}}
-							<p>{{ "Adress: {}".format(item['address'])}}
+							<p>{{ "Address: {}".format(item['address'])}}
 							<p><iframe width="450" height="250" frameborder="0" style="border:0" src="{{ item['map_url'] }}"></iframe></p>
 							<br>
 						</ul>
 				{% endfor %}
-				<a href="{{ url_for('index') }}">Look up another address</a>
+				<a href="{{ url_for('index') }}">Back to homepage</a>
 			{% else %}					
 				<div class="jumbotron">
 					<h2>Hello! What are you looking for?</h2>
@@ -36,6 +36,7 @@
 					</form>
 				</div>
 			{% endif %}
+			<br>
 			<p><a href="{{ url_for('about') }}">About this project</a></p>
 		</div>
 	</div>
