@@ -6,3 +6,7 @@ APIs used
 -------------
   - Yelp: for searching
   - Google Maps Embed API: for displaying location of the business
+
+
+
+[View Demo](https://yelpflask.herokuapp.com/)
